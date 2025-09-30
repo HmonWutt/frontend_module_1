@@ -41,7 +41,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
-button {
+button,
+.button {
   all: unset;
   display: inline-block;
   color: white;
@@ -54,8 +55,11 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
+.button:hover {
+  text-decoration: none;
+}
 
-button:hover {
+.button:hover {
   transition: all 0.2s ease;
 }
 .button-add {
