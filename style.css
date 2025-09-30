@@ -15,8 +15,10 @@
   --radius: 0.25rem;
   --space1: 1rem;
   --space2: 1.5rem;
+  --space3: 2rem;
   --book-bg: #b3b7d5;
   --footer-bg: #000435;
+  --main-bg: #04abde;
 }
 
 html,
@@ -75,9 +77,9 @@ button:hover {
   border-radius: 50%;
   background-color: var(--btn-filter-bg);
   position: fixed;
-  top: 8rem;
+  top: 15rem;
   cursor: pointer;
-  right: var(--space2);
+  right: var(--space3);
 }
 .button-filter input {
   display: none;
@@ -93,11 +95,10 @@ button:hover {
   display: none;
   position: fixed;
   text-align: center;
-  top: 11rem;
+  top: 17rem;
   width: 5rem;
   height: 4rem;
-  /*background-color: var(--btn-filter-bg);*/
-  right: var(--space2);
+  right: var(--space3);
   z-index: 997;
 }
 .button-filter input:checked ~ .box {
@@ -174,7 +175,7 @@ li {
   grid-area: main;
   grid-template-columns: repeat(2, 1fr);
 }
-.cart-title {
+.page-title {
   grid-area: label;
   padding-left: var(--space1);
 }
