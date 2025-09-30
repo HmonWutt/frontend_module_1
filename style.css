@@ -10,6 +10,7 @@
   --btn-remove: #ff8000;
   --btn-add-hover: #03a98e;
   --btn-remove-hover: #ff0000;
+  --btn-filter-bg: rgba(0, 0, 0, 0.1);
   --rdm: #637ab9;
   --radius: 0.25rem;
   --space1: 1rem;
@@ -31,6 +32,9 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: black;
+}
+.credit {
+  color: white;
 }
 a:hover {
   text-decoration: underline;
@@ -63,6 +67,41 @@ button:hover {
 }
 .button-remove:hover {
   background-color: var(--btn-remove-hover);
+}
+.button-filter {
+  width: 25px;
+  height: 25px;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--btn-filter-bg);
+  position: fixed;
+  top: 8rem;
+  cursor: pointer;
+  right: var(--space2);
+}
+.button-filter input {
+  display: none;
+  z-index: 999;
+}
+.button-filter img {
+  width: 100%;
+  height: auto;
+  z-index: 998;
+}
+
+.box {
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 11rem;
+  width: 5rem;
+  height: 4rem;
+  /*background-color: var(--btn-filter-bg);*/
+  right: var(--space2);
+  z-index: 997;
+}
+.button-filter input:checked ~ .box {
+  display: block;
 }
 header {
   grid-area: header;
@@ -179,7 +218,9 @@ footer {
   min-height: 100px;
   background-color: var(--footer-bg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-top: 0.5rem solid black;
   padding: var(--space1);
   color: white;
