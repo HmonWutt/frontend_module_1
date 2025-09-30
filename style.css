@@ -198,7 +198,6 @@ li {
   place-items: center;
   gap: calc(var(--space1) * 0.5);
   padding: var(--space2);
-  border: 0.05rem solid black;
   border-radius: var(--radius);
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
